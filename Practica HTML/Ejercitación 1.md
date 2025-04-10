@@ -49,7 +49,7 @@ Un elemento o atributo desaprobado es aquel que sigue funcionando, pero no se re
 **Ejemplo de elemento desaprobado:**
 
 ```html
-<div align="center">Contenido centrado</div>
+<div align="center">Contenido centrado</div>```
 
 Este atributo "align" está desaprobado y se recomienda usar CSS para alinear el contenido:
 
