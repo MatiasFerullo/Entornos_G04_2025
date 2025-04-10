@@ -78,7 +78,7 @@ La etiqueta `<font>` está obsoleta y no debe utilizarse. En su lugar, se debe u
 
 Un DTD (*Document Type Definition*) es un conjunto de reglas que define la estructura y los elementos válidos de un documento XML o HTML. Sirve para que los navegadores o validadores sepan cómo interpretar correctamente el contenido de una página.
 
-##cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+## cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
 
 Esta especificación es la primera Recomendación HTML 4.01. Incluye cambios no editoriales desde la versión del 24 de abril de HTML 4.0. Por ejemplo, se han hecho algunos cambios en los DTDs. Con este documento quedan obsoletas las versiones previas de HTML 4.0, aunque el W3C seguirá poniendo a disposición del público dichas especificaciones y sus DTDs en su sitio web.
 
