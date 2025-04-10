@@ -1,0 +1,245 @@
+<!-- A -->
+<h2>A - Enlaces</h2>
+
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a><br>
+<p>Enlace normal que redirige al usuario a Google</p>
+
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a><br>
+<p>Enlace que abre una pestaña nueva a Google</p>
+
+<a href="http://www.google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help"></a><br>
+<p>Enlace no funcional: No tiene texto y el enlace está mal escrito. No se muestra en la página.</p>
+
+<a href="#">Click aquí para ir a Google</a><br>
+<p>Enlace de ancla que no lleva a ningún lado útil</p>
+
+<a href="#arriba">Click aquí para volver arriba</a><br>
+<p>Enlace de ancla que envía al usuario hacia la sección de la página marcada con el destino #arriba</p>
+
+<a name="arriba" id="arriba"></a>
+<p>Marca la sección de la página como #arriba</p>
+
+<!-- B -->
+<h2>B - Enlaces con imágenes</h2>
+
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+<p>Enlace con una imagen al lado</p>
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+<p>Imagen con un enlace, el texto pierde el enlace en este caso</p>
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+<p>Imagen con un enlace, el texto y la imagen tienen el mismo enlace</p>
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+<p>Imagen con un enlace, ambos por separado</p>
+
+<!-- C -->
+<h2>C - Listas</h2>
+
+<ul>
+    <li>xxx</li>
+    <li>yyy</li>
+    <li>zzz</li>
+</ul>
+<p>Lista no ordenada</p>
+
+<ol>
+    <li>xxx</li>
+    <li>yyy</li>
+    <li>zzz</li>
+</ol>
+<p>Lista ordenada</p>
+
+<ol>
+    <li>xxx</li>
+</ol>
+<ol>
+    <li value="2">yyy</li>
+</ol>
+<ol>
+    <li value="3">zzz</li>
+</ol>
+<p>Dos listas ordenadas. Una con un solo elemento, la segunda con valores asociados a cada elemento. Estos valores se verán a la izquierda de los elementos con un espacio entre cada uno porque cada elemento está en una lista distinta.</p>
+
+<blockquote>
+<p>1. xxx<br />
+2. yyy<br />
+3. zzz</p>
+</blockquote>
+<p>No es una lista, solo la simula</p>
+
+<!-- D -->
+<h2>D - Tablas básicas</h2>
+
+<table border="1" width="300">
+    <tr><th>Columna 1</th><th>Columna 2</th></tr>
+    <tr><td>Celda 1</td><td>Celda 2</td></tr>
+    <tr><td>Celda 3</td><td>Celda 4</td></tr>
+</table>
+<p>Tabla estándar</p>
+
+<table border="1" width="300">
+    <tr><td align="center"><strong>Columna 1</strong></td><td align="center"><strong>Columna 2</strong></td></tr>
+    <tr><td>Celda 1</td><td>Celda 2</td></tr>
+    <tr><td>Celda 3</td><td>Celda 4</td></tr>
+</table>
+<p>Tabla sin encabezado, solo lo simula</p>
+
+<!-- E -->
+<h2>E - Tablas con estructura variable</h2>
+
+<table width="200">
+<caption>Entornos Gráficos - Diaz / Butti - Título</caption>
+<tr>
+    <td bgcolor="#dddddd">&nbsp;</td>
+    <td bgcolor="#dddddd">&nbsp;</td>
+    <td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+    <td bgcolor="#dddddd">&nbsp;</td>
+    <td bgcolor="#dddddd">&nbsp;</td>
+    <td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+<p>Tabla que ocupa un ancho de 200px en la página</p>
+
+<table>
+<tr>
+    <td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+    <td bgcolor="#dddddd">&nbsp;</td>
+    <td bgcolor="#dddddd">&nbsp;</td>
+    <td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+    <td bgcolor="#dddddd">&nbsp;</td>
+    <td bgcolor="#dddddd">&nbsp;</td>
+    <td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+<p>Tabla sin un espacio reservado en la página. El espacio que ocupa depende del contenido que alberga.</p>
+
+<!-- F -->
+<h2>F - Uso de rowspan y colspan</h2>
+
+<table width="200">
+<tr><td colspan="3"><div align="center">Título</div></td></tr>
+<tr><td rowspan="2" bgcolor="#dddddd">&nbsp;</td><td bgcolor="#dddddd">&nbsp;</td><td bgcolor="#dddddd">&nbsp;</td></tr>
+<tr><td bgcolor="#dddddd">&nbsp;</td><td bgcolor="#dddddd">&nbsp;</td></tr>
+</table>
+<p>Tabla con un elemento usando dos filas (rowspan = 2)</p>
+
+<table width="200">
+<tr><td colspan="3"><div align="center">Título</div></td></tr>
+<tr><td colspan="2" bgcolor="#dddddd">&nbsp;</td><td bgcolor="#dddddd">&nbsp;</td></tr>
+<tr><td bgcolor="#dddddd">&nbsp;</td><td bgcolor="#dddddd">&nbsp;</td><td bgcolor="#dddddd">&nbsp;</td></tr>
+</table>
+<p>Tabla con un elemento ocupando dos columnas (colspan = 2)</p>
+
+<!-- G -->
+<h2>G - Tablas con borde</h2>
+
+<table width="200" border="1">
+<tr><td colspan="3"><div align="center">Título</div></td></tr>
+<tr><td colspan="2" rowspan="2">&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td width="50%">&nbsp;</td></tr>
+</table>
+<p>Tabla enmarcada con padding con el primer elemento ocupando dos columnas y filas</p>
+
+<table width="200" border="1" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><div align="center">Título</div></td></tr>
+<tr><td rowspan="2">&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td width="50%">&nbsp;</td></tr>
+</table>
+<p>Tabla enmarcada sin padding</p>
+
+<!-- H -->
+<h2>H - Formularios</h2>
+
+<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+</fieldset>
+<input type="submit" id="boton1" name="boton1" value="Enviar" />
+</form>
+<p>Formulario estándar que usa un servidor y tiene valores de ejemplo</p>
+
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form>
+<p>Formulario que se maneja desde la misma página</p>
+
+<form id="form3" name="form3" action="mailto:xx@xx.com" enctype="text/plain" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu3" name="usu3" /><br />
+Clave: <input type="password" id="clave3" name="clave3" />
+</fieldset>
+<input type="reset" id="boton3" name="boton3" value="Enviar" />
+</form>
+<p>Formulario no funcional</p>
+
+<!-- I -->
+<h2>I - Botones</h2>
+
+<label>Botón 1
+    <button type="button" name="boton1" id="boton1">
+        <img src="logo.jpg" alt="Botón con imagen" width="30" height="20" /><br />
+        <b>CLICK AQUÍ</b>
+    </button>
+</label>
+<p>Botón que acepta contenido multimedia</p>
+
+<label>Botón 2
+    <input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label>
+<p>Botón que solo acepta texto plano</p>
+
+<!-- J -->
+<h2>J - Radio buttons</h2>
+
+<p>
+    <label><input type="radio" name="opcion" id="X" value="X" /> X</label><br />
+    <label><input type="radio" name="opcion" id="Y" value="Y" /> Y</label>
+</p>
+<p>Botón de radio, solo una opción puede ser seleccionada</p>
+
+<p>
+    <label><input type="radio" name="opcion1" id="X" value="X" /> X</label><br />
+    <label><input type="radio" name="opcion2" id="Y" value="Y" /> Y</label>
+</p>
+<p>Botón de radio no funcional, los nombres no coinciden</p>
+
+<!-- K -->
+<h2>K - Menús desplegables</h2>
+
+<select name="lista">
+    <optgroup label="Caso 1">
+        <option>Mayo</option>
+        <option>Junio</option>
+    </optgroup>
+    <optgroup label="Caso 2">
+        <option>Mayo</option>
+        <option>Junio</option>
+    </optgroup>
+</select>
+<p>Menú desplegable que permite elegir una opción entre 4 meses</p>
+
+<select name="lista[]" multiple="multiple" size="6">
+    <optgroup label="Caso 1">
+        <option>Mayo</option>
+        <option>Junio</option>
+    </optgroup>
+    <optgroup label="Caso 2">
+        <option>Mayo</option>
+        <option>Junio</option>
+    </optgroup>
+</select>
+<p>Menú siempre desplegado que permite seleccionar múltiples opciones</p>
