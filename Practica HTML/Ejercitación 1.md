@@ -51,8 +51,13 @@ Un elemento o atributo desaprobado es aquel que sigue funcionando, pero no se re
 ```html
 <div align="center">Contenido centrado</div>
 ```
+Este atributo "align" está desaprobado y se recomienda usar CSS para alinear el contenido:
 
-## 2. Elementos o Atributos Obsoletos (*Obsolete*)
+```html
+<div style="text-align: center;">Contenido centrado</div>
+```
+
+### 2. Elementos o Atributos Obsoletos (*Obsolete*)
 
 Un elemento u atributo obsoleto es aquel que ya no está permitido en las versiones actuales de HTML. Ya no funciona y debe ser evitado en todo momento.
 
