@@ -42,7 +42,7 @@ Para más información sobre las buenas prácticas en HTML, consultar con **W3C*
 
 ## Elementos y Atributos Desaprobados y Obsoletos en HTML
 
-### 1. Elementos o Atributos Desaprobados (*Deprecated*)
+### 1. Elementos o Atributos Desaprobados 
 
 Un elemento o atributo desaprobado es aquel que sigue funcionando, pero no se recomienda su uso, ya que se eliminará en futuras versiones de HTML. Su uso está desaconsejado.
 
@@ -57,7 +57,7 @@ Este atributo "align" está desaprobado y se recomienda usar CSS para alinear el
 <div style="text-align: center;">Contenido centrado</div>
 ```
 
-### 2. Elementos o Atributos Obsoletos (*Obsolete*)
+### 2. Elementos o Atributos Obsoletos 
 
 Un elemento u atributo obsoleto es aquel que ya no está permitido en las versiones actuales de HTML. Ya no funciona y debe ser evitado en todo momento.
 
