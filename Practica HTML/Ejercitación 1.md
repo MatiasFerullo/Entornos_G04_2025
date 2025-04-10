@@ -72,5 +72,20 @@ La etiqueta `<font>` está obsoleta y no debe utilizarse. En su lugar, se debe u
 ```html
 <span style="color: red;">Texto en rojo</span>
 ```
+---
+
+## Qué es el DTD
+
+Un DTD (*Document Type Definition*) es un conjunto de reglas que define la estructura y los elementos válidos de un documento XML o HTML. Sirve para que los navegadores o validadores sepan cómo interpretar correctamente el contenido de una página.
+
+##cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+
+Esta especificación es la primera Recomendación HTML 4.01. Incluye cambios no editoriales desde la versión del 24 de abril de HTML 4.0. Por ejemplo, se han hecho algunos cambios en los DTDs. Con este documento quedan obsoletas las versiones previas de HTML 4.0, aunque el W3C seguirá poniendo a disposición del público dichas especificaciones y sus DTDs en su sitio web.
+
+## Qué son los metadatos y cómo se especifican en HTML? 
+Los metadatos son datos sobre otros datos. En el contexto de HTML, los metadatos son información que describe el contenido de la página web, pero no se muestra directamente al usuario. Se utilizan principalmente por los navegadores, motores de búsqueda y redes sociales para entender mejor la página.
+Los metadatos se colocan en la etiqueta <head> del documento HTML y se usan principalmente las etiquetas `<meta>`, `<title>`, `<link>`, entre otras.
+
+
 
 
