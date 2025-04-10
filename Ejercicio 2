@@ -1,0 +1,22 @@
+2.a)
+<!-- Código controlado el día 12/08/2009 →
+Esto es un comentario, no genera ningún efecto en la página y puede ser colocado en cualquier lugar de la misma.
+
+2.b)
+<div id="bloque1">Contenido del bloque1</div>
+Un div es un contenedor genérico para contenido, aunque en este caso se está usando para mostrar texto. Debe estar colocado dentro del <body></body>.
+En este caso, posee un único atributo: 'id', con valor "bloque1". No es obligatorio.
+
+2.c)
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
+El elemento <img> permite mostrar una imagen en la página, aunque en este caso, debido a que el atributo 'src' está vacío, no podría mostrar ninguna imagen. Debe ir en el body.
+'alt' le da un texto alternativo a la imagen, lo que le permite a los navegadores no gráficos (para personas no videntes por ejemplo) interpretarla, 
+y lo que se muestra en este caso dado que 'src' está vacío.
+'src' es el único atributo obligatorio para que la etiqueta funcione.
+id, name, width, height son opcionales.
+longdesc está obsoleto.
+
+
+2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
