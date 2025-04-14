@@ -9,17 +9,17 @@ Esto es un comentario, no genera ningún efecto en la página y puede ser coloca
 <div id="bloque1">Contenido del bloque1</div>
 ```
 Un `div` es un contenedor genérico para dividir contenido, aunque en este caso se está usando para mostrar texto. Debe estar colocado dentro del body.
-En este caso, posee un único atributo: 'id', con valor "bloque1". No es obligatorio.
+En este caso, posee un único atributo: `id`, con valor "**bloque1**". No es obligatorio.
 
 2.c)
 ```html
 <img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
 ```
-El elemento `<img>` permite mostrar una imagen en la página, aunque en este caso, debido a que el atributo 'src' está vacío, no podría mostrar ninguna imagen. Debe ir en body.
-'alt' le da un texto alternativo a la imagen, lo que le permite a los navegadores no gráficos (para personas no videntes por ejemplo) interpretarla, 
-y lo que se muestra en este caso dado que 'src' está vacío.
-'src' es el único atributo obligatorio para que la etiqueta funcione.
-'id', 'name', 'width', 'height', 'longdesc' son atributos opcionales.
+El elemento `<img>` permite mostrar una imagen en la página, aunque en este caso, debido a que el atributo `src` está vacío, no podría mostrar ninguna imagen. Debe ir en body.
+`alt` le da un texto alternativo a la imagen, lo que le permite a los navegadores no gráficos (para personas no videntes por ejemplo) interpretarla, 
+y lo que se muestra en este caso dado que `src` está vacío.
+`src` es el único atributo obligatorio para que la etiqueta funcione.
+`id`, `name`, `width`, `height`, `longdesc` son atributos opcionales.
 
 
 2.d)
@@ -27,18 +27,18 @@ y lo que se muestra en este caso dado que 'src' está vacío.
 <meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
 <meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
 ```
-'meta' es un elemento de cabecera, es decir esta en el head del documento. No genera cambios visibles en el documento, pero si le brinda información adicional al buscador.
-'content' es el único atributo obligatorio.
-'name', 'lang', y 'http-equiv' son atributos opcionales.
+`meta` es un elemento de cabecera, es decir esta en el head del documento. No genera cambios visibles en el documento, pero si le brinda información adicional al buscador.
+`content` es el único atributo obligatorio.
+`name`, `lang`, y `http-equiv` son atributos opcionales.
 
 2.e)
 ```html
 <a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
 rel="help">Resumen HTML </a>
 ```
-'a' va dentro de body, y genera un enlace, pareciera, en este caso, a otra página web, no obstante, también puede generarlos a archivos o ubicaciones dentro de la misma página.
-'href' contiene la url a la que apunta el enlace y es el único atributo obligatorio. 'hreflang' indica el lenguaje (humano) del recurso enlazado.
-'rel' indica la relación del objevo de destino. 'type' indica el tipo de medio de la url enlazada. 'charset' está obsoleto.
+`a` va dentro de body, y genera un enlace, pareciera, en este caso, a otra página web, no obstante, también puede generarlos a archivos o ubicaciones dentro de la misma página.
+`href` contiene la url a la que apunta el enlace y es el único atributo obligatorio. `hreflang` indica el lenguaje (humano) del recurso enlazado.
+`rel` indica la relación del objevo de destino. `type` indica el tipo de medio de la url enlazada. `charset` está obsoleto.
 
 2.f)
 ```html
@@ -64,6 +64,6 @@ rel="help">Resumen HTML </a>
     </tr>
 </table>
 ```
-'table' como su nombre indica, genera una tabla, 'tr' marca las filas, 'th' es un elemento opcional que marca los encabezados de la tabla y 'td' genera cada una de las celdas.
-'scope' es un atributo que indica si es el encabezado de una columna o una fila.
-'table width', 'summary' y 'caption' son opcionales.
+`table` como su nombre indica, genera una tabla, `tr` marca las filas, `th` es un elemento opcional que marca los encabezados de la tabla y `td` genera cada una de las celdas.
+`scope` es un atributo que indica si es el encabezado de una columna o una fila.
+`table width`, `summary` y `caption` son opcionales.
