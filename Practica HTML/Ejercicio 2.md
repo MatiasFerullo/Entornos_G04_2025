@@ -1,6 +1,6 @@
 2.a)
 ```html
-<!-- Código controlado el día 12/08/2009 →
+<!-- Código controlado el día 12/08/2009  --!>
 ```
 Esto es un comentario, no genera ningún efecto en la página y puede ser colocado en cualquier lugar de la misma.
 
