@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        p.quitar {
+        color: red;
+        } 
+        
+        *.desarrollo {
+        font-size: 8px;
+        }
+
+        .importante {
+        font-size: 20px;
+        }
+    </style>
+    
+    <p class="desarrollo"> Este primer párrafo tiene un font de tamaño 8 ya que tiene la clase "desarrollo". </p>
+
+    <p class="quitar">
+        Este párrafo tiene texto en rojo porque tiene la clase "quitar".
+        <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+        </p>
+
+    <p>
+        Este párrafo no tiene nada especial ya que no se le definio una clase o se le dio un estilo a todos los p.<br />
+        xxxxxxxxxxxxxxxxxxxxxxxxx
+        </p>
+    
+    <p class="importante">
+        Este parrafo tiene un texto de tamaño 20 ya que tiene la clase "importante".
+        <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+        </p>
+
+    <h1 class="quitar">Este encabezado tiene la clase "quitar" pero no es un p, sino un h1, por lo que no es afectado.</h1>
+
+    <p class="quitar importante">Este parrafo es tanto "quitar" como "importante" por lo que se ve afectado por ambos.</p>
+</body>
+</html>
