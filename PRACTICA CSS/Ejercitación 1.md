@@ -104,6 +104,29 @@ Selecciona todos los elementos del documento.
 }
 ```
 
+## . ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+
+Una **pseudo-clase** en CSS permite aplicar estilos a un elemento **en un estado específico**, sin necesidad de añadir una clase o modificar el HTML.
+
+Se escriben después del selector, precedidas por dos puntos `:`.
+
+---
+
+### Ejemplo general
+
+```css
+button:hover {
+  background-color: lightblue;
+/* Aplica el color de fondo azul claro al pasar el mouse sobre un botón. */ 
+}
+
+Pseudo-clase | Cuándo se aplica
+---------------------------------
+`:link` | A un enlace no visitado.
+`:visited` | A un enlace que el usuario ya visitó.
+`:hover` | Cuando el mouse pasa por encima del enlace.
+`:active` | Mientras el enlace está siendo presionado (clickeado).
+`:focus` | Cuando el enlace tiene el foco (ej: con teclado o clic).
 
 
 
