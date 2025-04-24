@@ -70,7 +70,7 @@ p {
 }
 ```
 
-### 🔹 Selector de clase
+### 🔹Selector de clase
 Selecciona todos los elementos que tengan una clase específica. Se indica con un punto (.).
 
 ```html
