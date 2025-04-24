@@ -52,6 +52,60 @@ Se escribe en un archivo .css separado y se vincula al HTML con `<link>`.
   <link rel="stylesheet" href="estilos.css">
 </head>
 ```
+## ¿ Cuáles son los distintos tipos de selectores más utilizados?  Ejemplifique cada uno.
+
+### Tipos de selectores CSS más utilizados
+
+Los **selectores** en CSS permiten aplicar estilos a uno o varios elementos HTML.
+
+---
+
+### 🔹 Selector de etiqueta o tipo
+
+Selecciona todos los elementos de un tipo específico (etiqueta HTML).
+
+```css
+p {
+  color: blue;
+}
+```
+
+### 🔹 Selector de clase
+Selecciona todos los elementos que tengan una clase específica. Se indica con un punto (.).
+
+```html
+<h1 class="titulo">Hola</h1>
+<p class="titulo">Esto también se ve grande</p>
+```
+
+```css
+<h1 class="titulo">Hola</h1>
+<p class="titulo">Esto también se ve grande</p>
+```
+### 🔹Selector de ID
+elecciona un único elemento con un ID específico. Se indica con el símbolo #.
+
+```html
+<div id="principal">Este fondo es amarillo</div>
+```
+
+```css
+#principal {
+  background-color: yellow;
+}
+```
+### 🔹Selector universal
+Selecciona todos los elementos del documento.
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+}
+```
+
+
+
 
 
 
