@@ -60,7 +60,7 @@ Los **selectores** en CSS permiten aplicar estilos a uno o varios elementos HTML
 
 ---
 
-### 🔹 Selector de etiqueta o tipo
+### 🔹Selector de etiqueta o tipo
 
 Selecciona todos los elementos de un tipo específico (etiqueta HTML).
 
@@ -94,7 +94,7 @@ elecciona un único elemento con un ID específico. Se indica con el símbolo #.
   background-color: yellow;
 }
 ```
-### 🔹Selector universal
+### 🔹 Selector universal
 Selecciona todos los elementos del documento.
 
 ```css
