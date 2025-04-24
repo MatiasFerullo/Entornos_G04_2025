@@ -121,13 +121,22 @@ button:hover {
 }
 ```
 
-Pseudo-clase | Cuándo se aplica
----------------------------------
-`:link` | A un enlace no visitado.
-`:visited` | A un enlace que el usuario ya visitó.
-`:hover` | Cuando el mouse pasa por encima del enlace.
-`:active` | Mientras el enlace está siendo presionado (clickeado).
-`:focus` | Cuando el enlace tiene el foco (ej: con teclado o clic).
+### Pseudo-clases más comunes para enlaces en CSS
+
+Estas pseudo-clases se utilizan para aplicar estilos a los enlaces (`<a>`) dependiendo del estado en que se encuentren:
+
+| Pseudo-clase | Descripción                                                                 |
+|--------------|------------------------------------------------------------------------------|
+| `:link`      | Se aplica a enlaces que **no han sido visitados** por el usuario.           |
+| `:visited`   | Se aplica a enlaces que **ya fueron visitados** (clickeados).               |
+| `:hover`     | Se aplica cuando el puntero del mouse **pasa por encima** del enlace.       |
+| `:active`    | Se aplica mientras el enlace está siendo **presionado** (clickeado).        |
+| `:focus`     | Se aplica cuando el enlace tiene el **foco** (ej. al navegar con el teclado).|
+
+> Para un comportamiento correcto, aplicá las pseudo-clases en este orden:
+> **`:link` → `:visited` → `:hover` → `:active`**
+
+
 
 
 
