@@ -10,8 +10,8 @@ donde disponer texto e imágenes en la página.
 
 ## CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
 Una regla CSS está compuesta por dos partes principales: el **selector** y el **bloque de declaraciones**.
-El selector: nos indica que parte del *HTML* vamos a modificar y el *bloque de devlaraciones* siempre inicia con una `{` y finaliza con `}`
-dentro de las llaves colocaremos todos lo cambios que querramos hacerle al *selector*
+El selector: nos indica que parte del *HTML* vamos a modificar y el *bloque de declaraciones* siempre inicia con una `{` y finaliza con `}`.
+Dentro de las llaves colocaremos todos lo cambios que querramos hacerle al *selector*
 ```
 p {
   color: red;
