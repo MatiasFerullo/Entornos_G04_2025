@@ -119,6 +119,7 @@ button:hover {
   background-color: lightblue;
 /* Aplica el color de fondo azul claro al pasar el mouse sobre un botón. */ 
 }
+```
 
 Pseudo-clase | Cuándo se aplica
 ---------------------------------
