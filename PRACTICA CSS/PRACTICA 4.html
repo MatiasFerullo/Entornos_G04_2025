@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 4</title>
+    <style>
+        * {
+            color:green; 
+          }
+        a:link {
+            color:gray 
+               }
+        a:visited{
+            color:blue 
+                 }
+        a:hover {
+            color:fuchsia 
+                } 
+        a:active {
+            color:red 
+                 }
+        p {
+            font-family: arial,helvetica;
+            font-size: 10px;
+            color:black; 
+          }
+        .contenido{
+            font-size: 14px;
+            font-weight: bold; 
+                  }
+    </style>
+</head>
+<!--
+Bloque 1
+<body>
+
+    <p class="contenido" style="font-weight: normal;"> 
+        Este es un texto ...............</p> 
+        <table> 
+        <tr> 
+        <td>Y esta es una tabla.......</td> 
+        </tr> 
+        <tr> 
+        <td><a href="http://www.google.com.ar">con un 
+        enlace</a></td> 
+        </tr> 
+        </table>
+     
+</body>
+-->
+<!--Bloque 2-->
+<body class="contenido"> 
+    <p> Este es un texto................</p> 
+    <table> 
+    <tr> 
+    <td>Y esta es una tabla.......</td> 
+    </tr> 
+    <tr> 
+    <td><a href="http://www.google.com.ar">con 
+    un enlace</a></td> 
+    </tr> 
+    </table> 
+    </body>
+
+</html>
+<!-- 
+En el bloque 1
+p = font-family: arial,helvetica;
+    font-size: 14px; devido a que tiene la clase contenido y por cascada se le cambia
+    font-weight: normal; devido a que está dentro de la linea de codigo y se pisa
+tabla = color:green;
+
+En el bloque 2 
+p = font-family: arial,helvetica;
+    font-size: 10px;
+    color:black;
+tabla = font-size: 14px; se hereda del body por la clase contenido
+        font-weight: bold; se hereda del body por la clase contenido
+        color:green; lo adquiere por *
+-->
