@@ -174,6 +174,52 @@ div {
   border: inherit;
 }
 ```
+## ¿En qué consiste el proceso denominado "cascada" en CSS?
+
+El término **cascada** en CSS se refiere al **proceso que utiliza el navegador para decidir qué estilos aplicar** cuando hay múltiples reglas que afectan al mismo elemento.
+
+---
+
+#### 🔹 ¿Cómo decide el navegador qué estilo aplicar?
+
+Cuando hay conflictos entre estilos, el navegador evalúa tres factores clave **en este orden**:
+
+### 1. **Importancia**
+- Las reglas con `!important` tienen la mayor prioridad.
+```css
+p {
+  color: red !important;
+}
+```
+### 2.  **Especificidad**
+Cuanto más específico es un selector, más peso tiene.
+
+```css
+/* Menor especificidad */
+p {
+  color: green;
+}
+
+/* Mayor especificidad */
+#contenido p {
+  color: blue;
+}
+
+```
+## 3. Orden de aparición
+Si dos reglas tienen la misma importancia y especificidad, gana la que aparece más abajo en el código.
+
+```css
+p {
+  color: black;
+}
+
+p {
+  color: orange; /* Este gana */
+}
+```
+### ¿Por qué se llama "cascada"?
+Porque los estilos "caen" o se superponen uno sobre otro, y el navegador los procesa en cascada para determinar cuál se aplica finalmente.
 
 
 
