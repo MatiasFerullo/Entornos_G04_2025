@@ -152,7 +152,7 @@ No todos los estilos se heredan, pero muchos de los que afectan al texto (como `
 </div>
 ```
 
-Propiedades que se heredan comúnmente:
+Propiedades que se heredan:
 
 |Propiedad        | Descripción                   |
 |-----------------|-------------------------------|
@@ -164,9 +164,16 @@ Propiedades que se heredan comúnmente:
 |`letter-spacing` | Espaciado entre letras        |
 |`word-spacing`   | Espaciado entre palabras      |
 
+Propiedades que no se heredan por defecto:
+`margin`, `padding` , `border` , `background` , `width` , `height` , `display` , `position` , etc.
 
+Para forzar que se herede una propiedad no heredable, se puede usar:
 
-
+```css
+div {
+  border: inherit;
+}
+```
 
 
 
