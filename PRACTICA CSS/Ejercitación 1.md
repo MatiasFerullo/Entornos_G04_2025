@@ -136,6 +136,32 @@ Estas pseudo-clases se utilizan para aplicar estilos a los enlaces (`<a>`) depen
 > Para un comportamiento correcto, aplicá las pseudo-clases en este orden:
 > **`:link` → `:visited` → `:hover` → `:active`**
 
+## ¿Qué es la herencia en CSS?
+
+En CSS, la **herencia** es el mecanismo mediante el cual algunos estilos aplicados a un elemento **se transfieren automáticamente a sus elementos hijos**.
+
+No todos los estilos se heredan, pero muchos de los que afectan al texto (como `color`, `font-family`, `line-height`) sí lo hacen.
+
+---
+
+### 🔹 Ejemplo simple:
+
+```html
+<div style="color: blue;">
+  <p>Este texto será azul porque hereda el color del div padre.</p>
+</div>
+
+Propiedades que se heredan comúnmente:
+|Propiedad | Descripción|
+|--------------|--------------|
+|color | Color del texto|
+|font-family | Fuente tipográfica|
+|font-size | Tamaño de fuente|
+|line-height | Altura de línea|
+|visibility | Visibilidad del elemento|
+|letter-spacing | Espaciado entre letras|
+|word-spacing | Espaciado entre palabras|
+
 
 
 
