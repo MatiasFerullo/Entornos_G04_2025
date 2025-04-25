@@ -152,15 +152,16 @@ No todos los estilos se heredan, pero muchos de los que afectan al texto (como `
 </div>
 
 Propiedades que se heredan comúnmente:
-|Propiedad | Descripción|
-|--------------|--------------|
-|color | Color del texto|
-|font-family | Fuente tipográfica|
-|font-size | Tamaño de fuente|
-|line-height | Altura de línea|
-|visibility | Visibilidad del elemento|
-|letter-spacing | Espaciado entre letras|
-|word-spacing | Espaciado entre palabras|
+
+|Propiedad        | Descripción                   |
+|-----------------|-------------------------------|
+|`color`          | Color del texto               |
+|`font-family`    | Fuente tipográfica            |
+|`font-size `     | Tamaño de fuente              |
+|`line-height`    | Altura de línea               |
+|`visibility`     | Visibilidad del elemento      |
+|`letter-spacing` | Espaciado entre letras        |
+|`word-spacing`   | Espaciado entre palabras      |
 
 
 
