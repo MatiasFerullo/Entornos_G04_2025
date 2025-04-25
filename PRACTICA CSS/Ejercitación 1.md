@@ -150,6 +150,7 @@ No todos los estilos se heredan, pero muchos de los que afectan al texto (como `
 <div style="color: blue;">
   <p>Este texto será azul porque hereda el color del div padre.</p>
 </div>
+```
 
 Propiedades que se heredan comúnmente:
 
