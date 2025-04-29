@@ -1,0 +1,27 @@
+.container{
+    background-color: rgb(218, 241, 151);
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.salmon{
+    background-color: salmon;
+}
+.magenta{
+    background-color: darkmagenta;
+}
+.turquoise{
+    background-color: paleturquoise;
+}
+
+@media (max-width: 767.98px) {
+    .esconder {
+        display: none;
+    }
+  }
