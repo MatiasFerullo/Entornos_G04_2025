@@ -24,8 +24,7 @@ $mail->addAddress('servereg419@gmail.com');
 if (isset($_POST['botonEnviar'])) {
     // Process your PHP code here
     $consulta = $_POST['consulta'];
-    $mailConsulta = $_POST['email'];    
-    echo "XXX";   
+    $mailConsulta = $_POST['email'];       
     session_start();
     $_SESSION['consulta'] = $consulta;
     $_SESSION['mailConsulta'] = $mailConsulta;
