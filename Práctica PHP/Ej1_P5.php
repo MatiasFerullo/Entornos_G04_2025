@@ -31,7 +31,6 @@ try {
     <HTML lang=es xmlns="http://www.w3.org/1999/xhtml">
     <HEAD><TITLE>Página Principal</TITLE>
     <META http-equiv=Content-Type content="text/html; charset=iso-8859-1"></META>
-    <link rel="stylesheet" href="ej6.css">
     </HEAD>
     <BODY>
     <DIV id=titulo     
