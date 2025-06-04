@@ -1,3 +1,97 @@
 .turquoise{
-    background-color: paleturquoise;
+    background: linear-gradient(135deg, #8ff3f3 0%, #1b4893 100%);
 }
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.salmon{
+    background-color: salmon;
+}
+.magenta{
+    background-color: darkmagenta;
+}
+
+.header-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+body {
+    background: linear-gradient(135deg, #2e365f 0%, #145bb5 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.form-floating {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    background-color: #7ec663;
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.btn-login:hover {
+    background-color: #6db54a; /* slightly darker green */
+    color: white; /* ensure text stays white */
+}
+
+@media (max-width: 767.98px) {
+    .esconder {
+        display: none;
+    }
+  }
