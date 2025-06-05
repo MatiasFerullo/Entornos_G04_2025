@@ -1,7 +1,9 @@
 <?php
     require 'Header.php';
     generateHeader('inicioSesion', $arbolSitio);
+    require 'busquedaSQL.php';
     require 'conexion.php';
+    require 'mandarMail.php'
 ?>  
 <!DOCTYPE html>
 <html lang="es">
@@ -50,9 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
     $action = $_POST['action'];
 
     if ($action == 'registro') {
-        $vSql = "SELECT Count(nombreUsuario) as canti FROM usuarios WHERE nombreUsuario='$nomUsuario'";
-        $Resultado = mysqli_query($link, $vSql) or die (mysqli_error($link));;
-        $CantUsuarios = mysqli_fetch_assoc($Resultado);
+        $CantUsuarios = busquedaSQL("SELECT Count(nombreUsuario) as canti FROM usuarios WHERE nombreUsuario='$nomUsuario'");
         
         if ($CantUsuarios ['canti']!=0){
             echo ("El Usuario ya Existe<br>");
@@ -61,8 +61,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
             $vSql = "INSERT INTO usuarios (nombreUsuario, claveUsuario, tipoUsuario, catCliente)
             values ('$nomUsuario','$clave', 'Cliente', 'Inicial')";
             mysqli_query($link, $vSql) or die (mysqli_error($link));
-            echo("El Usuario fue Registrado. Recibirá un mail de confirmación.<br>");
-            mysqli_free_result($vResultado);
+            $_SESSION['usuario'] = $nomUsuario;
+            $_SESSION['tipoUsuario'] = 'Cliente';
+            $_SESSION['catCliente'] = 'Inicial';
+            mandarMail('Registro Exitoso', 'No responder.', $nomUsuario);
+            header("Location: menuCliente.php");
+
+        }
+        mysqli_close($link);
+    }
+
+    if ($action == 'inicio') {
+        $CantUsuarios = busquedaSQL("SELECT Count(nombreUsuario) as canti FROM usuarios WHERE nombreUsuario='$nomUsuario' AND claveUsuario='$clave'");
+        if ($CantUsuarios ['canti']!=0){
+            $TipoUsuario = busquedaSQL("SELECT tipoUsuario FROM usuarios WHERE nombreUsuario='$nomUsuario' AND claveUsuario='$clave'");
+            session_start();
+            $_SESSION['usuario'] = $nomUsuario;
+            $_SESSION['tipoUsuario'] = $TipoUsuario['tipoUsuario'];
+            if($_SESSION['tipoUsuario'] == 'Cliente') {                
+                $catCliente = busquedaSQL("SELECT catCliente FROM usuarios WHERE nombreUsuario='$nomUsuario' AND claveUsuario='$clave'");
+                $_SESSION['catCliente'] = $catCliente['catCliente'];
+                header("Location: menuCliente.php");
+            } else if ($_SESSION['tipoUsuario'] == 'Dueño'){
+                header("Location: menuDueno.php");
+            } else if ($_SESSION['tipoUsuario'] == 'Admin'){
+                header("Location: menuAdmin.php");
+            }    
+        }
+        else {
+            echo ("El Usuario o la Clave son Incorrectos. Considere Registrarse. <br>");
         }
         mysqli_close($link);
     }

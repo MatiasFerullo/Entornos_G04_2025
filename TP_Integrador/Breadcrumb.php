@@ -26,7 +26,7 @@
                 ['title' => 'Menú', 'url' => 'menuDueno.php']
             ],
     
-        'menuUsuario' => [
+        'menuCliente' => [
             ['title' => 'Principal', 'url' => 'principal.php'],
             ['title' => 'Iniciar sesión', 'url' => 'inicioSesion.php']
         ],
@@ -91,11 +91,11 @@
         $titles = [
             'principal' => 'Principal',
             'inicioSesion' => 'Iniciar sesión',
-            'menuDueno' => 'Menú',
+            'menuDueno' => 'Menú Dueño',
             'altaDescuentos' => 'Alta Descuentos',
             'usoDescuentos' => 'Uso Descuentos', 
             'peticionUsoDescuentos' => 'Petición Uso Descuentos',
-            'menuUsuario' => 'Menú Usuario',
+            'menuCliente' => 'Menú Cliente',
             'menuAdmin' => 'Menú Admin',
             'peticionAltaDescuentos' => 'Petición Alta Descuentos',
             'listadoLocales' => 'Listado Locales',
