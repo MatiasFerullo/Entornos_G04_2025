@@ -2,6 +2,7 @@
     require 'Header.php';
     generateHeader('Pagina Principal', $arbolSitio);
     require 'busquedaSQL.php';
+    require 'conexion.php'
 ?>  
 
 <!DOCTYPE html>
@@ -41,7 +42,8 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- Controles del carrusel, preferible no tocar -->
         <button class="carousel-control-prev" type="button" data-bs-target="#CarruselNovedades" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
