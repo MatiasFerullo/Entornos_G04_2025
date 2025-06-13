@@ -1,9 +1,69 @@
 <?php
     require 'Header.php';
     generateHeader('inicioSesion', $arbolSitio);
+    require 'Footer.php';
     require 'busquedaSQL.php';
     require 'conexion.php';
-    require 'mandarMail.php'
+    require 'mandarMail.php';
+
+    $alertMessage = '';
+    $alertType = '';
+
+    //Captura datos desde el Form anterior
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
+        $nomUsuario = $_POST['email'];
+        $clave = $_POST['password'];
+        $action = $_POST['action'];
+
+        if ($action == 'registro') {
+            $CantUsuarios = busquedaSQL("SELECT Count(nombreUsuario) as canti FROM usuarios WHERE nombreUsuario='$nomUsuario'");
+            
+            if ($CantUsuarios ['canti']!=0){
+                $alertMessage = "El Usuario ya Existe";
+                $alertType = "danger";
+            }
+            else {
+                $vSql = "INSERT INTO usuarios (nombreUsuario, claveUsuario, tipoUsuario, catCliente)
+                values ('$nomUsuario','$clave', 'Cliente', 'Inicial')";
+                mysqli_query($link, $vSql) or die (mysqli_error($link));
+                session_start();
+                $_SESSION['usuario'] = $nomUsuario;
+                $_SESSION['tipoUsuario'] = 'Cliente';
+                $_SESSION['catCliente'] = 'Inicial';
+                mandarMail('Registro Exitoso', 'No responder.', $nomUsuario);
+                header("Location: menuCliente.php");
+                exit();
+            }
+            mysqli_close($link);
+        }
+
+        if ($action == 'inicio') {
+            $CantUsuarios = busquedaSQL("SELECT Count(nombreUsuario) as canti FROM usuarios WHERE nombreUsuario='$nomUsuario' AND claveUsuario='$clave'");
+            if ($CantUsuarios ['canti']!=0){
+                $TipoUsuario = busquedaSQL("SELECT tipoUsuario FROM usuarios WHERE nombreUsuario='$nomUsuario' AND claveUsuario='$clave'");
+                session_start();
+                $_SESSION['usuario'] = $nomUsuario;
+                $_SESSION['tipoUsuario'] = $TipoUsuario['tipoUsuario'];
+                if($_SESSION['tipoUsuario'] == 'Cliente') {                
+                    $catCliente = busquedaSQL("SELECT catCliente FROM usuarios WHERE nombreUsuario='$nomUsuario' AND claveUsuario='$clave'");
+                    $_SESSION['catCliente'] = $catCliente['catCliente'];
+                    header("Location: menuCliente.php");
+                    exit();
+                } else if ($_SESSION['tipoUsuario'] == 'Dueño'){
+                    header("Location: menuDueno.php");
+                    exit();
+                } else if ($_SESSION['tipoUsuario'] == 'Admin'){
+                    header("Location: menuAdmin.php");
+                    exit();
+                }    
+            }
+            else {
+                $alertMessage = "El Usuario o la Clave son Incorrectos. Considere Registrarse.";
+                $alertType = "danger";
+            }
+            mysqli_close($link);
+        }
+    }
 ?>  
 <!DOCTYPE html>
 <html lang="es">
@@ -16,8 +76,13 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>  
-    <div class="login-wrapper">
-        <div class="login-container">
+    <?php if ($alertMessage): ?>
+        <div class="alert alert-<?php echo $alertType; ?> alert-dismissible fade show" role="alert" style="margin: 0; border-radius: 0;">
+            <?php echo $alertMessage; ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
+        <div class="login-container centered-div">
             <div class="login-header">
                 <h2>Bienvenido!</h2>
             </div>
@@ -43,56 +108,6 @@
                 <button type="submit" name="action" value="registro" class="btn btn-login">Registrarse</button>
             </form>
         </div>
+        <?php generateFooter(); ?>
 </body>
-<?php
-//Captura datos desde el Form anterior
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
-    $nomUsuario = $_POST['email'];
-    $clave = $_POST['password'];
-    $action = $_POST['action'];
-
-    if ($action == 'registro') {
-        $CantUsuarios = busquedaSQL("SELECT Count(nombreUsuario) as canti FROM usuarios WHERE nombreUsuario='$nomUsuario'");
-        
-        if ($CantUsuarios ['canti']!=0){
-            echo ("El Usuario ya Existe<br>");
-        }
-        else {
-            $vSql = "INSERT INTO usuarios (nombreUsuario, claveUsuario, tipoUsuario, catCliente)
-            values ('$nomUsuario','$clave', 'Cliente', 'Inicial')";
-            mysqli_query($link, $vSql) or die (mysqli_error($link));
-            $_SESSION['usuario'] = $nomUsuario;
-            $_SESSION['tipoUsuario'] = 'Cliente';
-            $_SESSION['catCliente'] = 'Inicial';
-            mandarMail('Registro Exitoso', 'No responder.', $nomUsuario);
-            header("Location: menuCliente.php");
-
-        }
-        mysqli_close($link);
-    }
-
-    if ($action == 'inicio') {
-        $CantUsuarios = busquedaSQL("SELECT Count(nombreUsuario) as canti FROM usuarios WHERE nombreUsuario='$nomUsuario' AND claveUsuario='$clave'");
-        if ($CantUsuarios ['canti']!=0){
-            $TipoUsuario = busquedaSQL("SELECT tipoUsuario FROM usuarios WHERE nombreUsuario='$nomUsuario' AND claveUsuario='$clave'");
-            session_start();
-            $_SESSION['usuario'] = $nomUsuario;
-            $_SESSION['tipoUsuario'] = $TipoUsuario['tipoUsuario'];
-            if($_SESSION['tipoUsuario'] == 'Cliente') {                
-                $catCliente = busquedaSQL("SELECT catCliente FROM usuarios WHERE nombreUsuario='$nomUsuario' AND claveUsuario='$clave'");
-                $_SESSION['catCliente'] = $catCliente['catCliente'];
-                header("Location: menuCliente.php");
-            } else if ($_SESSION['tipoUsuario'] == 'Dueño'){
-                header("Location: menuDueno.php");
-            } else if ($_SESSION['tipoUsuario'] == 'Admin'){
-                header("Location: menuAdmin.php");
-            }    
-        }
-        else {
-            echo ("El Usuario o la Clave son Incorrectos. Considere Registrarse. <br>");
-        }
-        mysqli_close($link);
-    }
-}
-?>
 </html>
