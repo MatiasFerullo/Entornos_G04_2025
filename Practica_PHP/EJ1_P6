@@ -1,0 +1,47 @@
+Consulta a una base de datos: Para comenzar la comunicación con un servidor de base de datos MySQL, es
+necesario abrir una conexión a ese servidor. Para inicializar esta conexión, PHP ofrece la función:
+mysqli_connect();
+
+Todos sus parámetros son opcionales, pero hay tres de ellos que generalmente son necesarios:
+$hostname: nombre del servidor
+$nombreUsuario: nombre de usuario de la base de datos, por defecto es root.
+$contraseña: nombre de contraseña de la base de datos.
+
+Una vez abierta la conexión, se debe seleccionar una base de datos para su uso, mediante la función
+mysqli_select_db(); 
+
+Esta función debe pasar como parámetro:
+$nombreConexión, $nombreBaseDatos;
+
+La función mysqli_query () se utiliza para:
+Para ejecutar una consulta a la base de datos específicada. Devuelve un objeto que contiene las celdas que coinciden con la query.
+
+y requiere como parámetros
+El nombre del conexión que se obtuvo con mysqli_connect y una query.
+
+La cláusula or die() se utiliza para
+Imprime un mensaje y termina el script actual.
+
+y la función mysqli_error () se puede usar para
+Para ver el mensaje de error de la última llamada a una función mysqli()
+
+
+<?php while ($fila = mysqli_fetch_array($vResultado)){ ?>
+<tr>
+ <td><?php echo ($fila[0]); ?></td>
+ <td><?php echo ($fila[1]); ?></td>
+ <td><?php echo ($fila[2']); ?></td>
+</tr>
+<tr>
+ <td colspan="5">
+<?php }
+mysqli_free_result($vResultado);
+mysqli_close($link);
+?>
+
+En cada iteración, el 'while' va asignando una fila del resultado de la query a $fila, que es un array.
+Luego, utilizando HTML genera una tabla, en la que en cada celda se está imprimiendo un valor de $fila, es decir,
+una celda de la tabla de la base de datos que coincide con la query realizada, que podemos suponer tiene formato de 3 columnas
+(Podría ser, por ejemplo, nombre, apellido y DNI).
+Dado que el HTML se encuentra dentro del while, se van a ir imprimiendo filas de la tabla hasta que se terminen las filas del resultado de la query.
+Finalmente, free_result permite liberar la memoria asociada con el resultado y close cierra la conexión.
