@@ -1,6 +1,5 @@
 <?php
     require 'Header.php';
-    generateHeader('inicioSesion', $arbolSitio);
     require 'Footer.php';
     require 'busquedaSQL.php';
     require 'conexion.php';
@@ -82,6 +81,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <?php endif; ?>
+    <div class="container">
+     <?php generateHeader('inicioSesion', $arbolSitio); ?>
         <div class="login-container centered-div">
             <div class="login-header">
                 <h2>Bienvenido!</h2>
@@ -109,5 +110,6 @@
             </form>
         </div>
         <?php generateFooter(); ?>
+    </div>
 </body>
 </html>
