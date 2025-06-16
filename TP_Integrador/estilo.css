@@ -185,3 +185,9 @@ body {
         display: none;
     }
   }
+
+.card {
+    background-color: #6db54a;
+    width: 18rem;
+    margin-bottom: 20px;
+}
