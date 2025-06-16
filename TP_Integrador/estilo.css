@@ -18,109 +18,28 @@
 }
 
 .header-section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    grid-row: 1
-}
-
-.container { 
-    display: grid; 
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto;
-}  
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(135deg, #7ec663 0%, #5fa047 100%);
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    grid-row: 3;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-
-.footer-links a:hover {
-    opacity: 0.8;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-}
-
-.footer-logo img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    border-radius: 6px;
-}
-
-.alert {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1001;
-    margin: 0 !important;
-    border-radius: 0 !important;
-}
-
-body:has(.alert) {
-    margin-top: 58px;
+    z-index: 1000;
 }
 
 body {
-    padding-top: 100px;
     background: linear-gradient(135deg, #2e365f 0%, #145bb5 100%);
     min-height: 100vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    grid-row: 2;
 }
-
-.close-btn {
-    float: right;
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.centered-div {
-    width:300px;
-    margin:auto;
-  }
 
 .login-container {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 4rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
     width: 100%;
     max-width: 420px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -166,18 +85,9 @@ body {
     margin-bottom: 1rem;
 }
 
-.inic-ses{
-    color: #7ec663;
-    
-}
-
-.inic-ses:hover{
-    color: white;
-}
-
 .btn-login:hover {
-    background-color: #6db54a;
-    color: white;
+    background-color: #6db54a; /* slightly darker green */
+    color: white; /* ensure text stays white */
 }
 
 @media (max-width: 767.98px) {
@@ -185,3 +95,8 @@ body {
         display: none;
     }
   }
+
+.card {
+    background-color: #91b1a1;
+    width: 18rem;
+}
