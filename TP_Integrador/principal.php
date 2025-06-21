@@ -17,9 +17,15 @@
 </head>
 <body>
     <!-- Tabla para organizar el contenido -->
-    <div class="container">
+    <div class="container" style="justify-content-center; margin-top: 20px;">
+        <div class="row">
+            <div class="search-container">
+                <input type="text" class="form-control search-input" placeholder="Busqueda de local...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </div>
         <div class = "row">
-            <div id="CarruselNovedades" class="carousel slide">
+            <div id="CarruselNovedades" class="carousel slide" style="margin-top: 20px;">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="Foto_boo_koo.png" class="d-block w-100" alt="...">
