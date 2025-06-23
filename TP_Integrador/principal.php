@@ -19,9 +19,11 @@
     <!-- Tabla para organizar el contenido -->
     <div class="container" style="justify-content-center; margin-top: 20px;">
         <div class="row">
-            <div class="search-container">
-                <input type="text" class="form-control search-input" placeholder="Busqueda de local...">
-                <i class="fas fa-search search-icon"></i>
+            <div class="col">
+                <div class="search-container">
+                    <input type="text" class="form-control search-input" placeholder="Busqueda de local...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
             </div>
         </div>
         <div class = "row">
