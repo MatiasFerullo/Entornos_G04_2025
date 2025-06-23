@@ -1,6 +1,6 @@
 <?php
     require 'Header.php';
-    generateHeader('Pagina Principal', $arbolSitio);
+    generateHeader('Busqueda', $arbolSitio);
     require 'busquedaSQL.php';
     /* require 'conexion.php'; */ /* no funciona porque no esta la base de datos */
 ?>  
