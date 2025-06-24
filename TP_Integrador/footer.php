@@ -13,7 +13,7 @@ function generateFooter() {
                     <span>&copy; 2025 |</span>
                 </div>
                 <nav class="footer-links">
-                    <a href="#">Contacto</a>
+                    <a href="formularioConsulta.php">Contacto</a>
                 </nav>
             </div>
         </footer>

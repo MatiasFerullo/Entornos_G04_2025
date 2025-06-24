@@ -10,12 +10,11 @@ function generateHeader($pagActualID, $arbolSitio){
     $breadcrumbs = generarBreadcrumbs($pagActualID, $arbolSitio);
     $breadcrumbHtml = generarBreadcrumbsHTML($breadcrumbs);
 
-    echo '<body>
-    <header class="header-section">
+    echo '<header class="header-section">
             <div class="container-fluid turquoise">
                 <div class="row align-items-center header-content">
                     <!-- Izquierda -->
-                    <div class="col-md-3 text-md-start col-12 text-center">
+                    <div class="col-md-1 text-md-start col-12 text-center esconder">
                         <a href="principal.php">
                             <img src="Foto_boo_koo.png" alt="logo del shopping" class="header-logo" style="height: 5rem;"/>
                         </a>
@@ -25,18 +24,16 @@ function generateHeader($pagActualID, $arbolSitio){
                     <div class="col-md-6 col-12 breadcrumb-section">';
                         echo $breadcrumbHtml;
 
-                    echo '</div>
+                        echo '</div>
 
-                    <!-- Right: Text -->
-                    <div class="col-md-3 col-12 text-center text-md-end">
-                        <a href="inicioSesion.php">
-                            <p class="header-text">Iniciar Sesión</p>
-                        </a>
+                        <!-- Right: Text -->
+                        <div class="col-md-3 col-12 text-center text-md-end">
+                            <a class = "inic-ses" href="inicioSesion.php">
+                                <p class="header-text">Iniciar Sesión</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
-    </body>
-    </html>';
-}
-?>
+            </header>';
+    }
+    ?>

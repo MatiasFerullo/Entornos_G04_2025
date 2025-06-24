@@ -15,6 +15,10 @@
                 ['title' => 'Iniciar sesión', 'url' => 'inicioSesion.php'],
                 ['title' => 'Menú', 'url' => 'menuDueno.php']
             ],
+            'formularioConsulta' => [
+                ['title' => 'Principal', 'url' => 'principal.php'],
+                ['title' => 'Iniciar sesión', 'url' => 'inicioSesion.php'],
+            ],
             'usoDescuentos' => [
                 ['title' => 'Principal', 'url' => 'principal.php'],
                 ['title' => 'Iniciar sesión', 'url' => 'inicioSesion.php'],
