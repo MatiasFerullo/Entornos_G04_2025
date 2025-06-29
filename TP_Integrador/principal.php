@@ -3,7 +3,7 @@
     generateHeader('Pagina Principal', $arbolSitio);
     require 'Footer.php';
     require 'busquedaSQL.php';
-    require 'conexion.php'
+    //require 'conexion.php'
 ?>  
 
 <!DOCTYPE html>
